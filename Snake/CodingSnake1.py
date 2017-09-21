@@ -164,7 +164,9 @@ def snakemove():
 
 
 
-
+def snakecollision():
+    if pygame.sprite.spritecollide(snake_segments[0], allspriteslist, False, False):
+        return True
 
 
 
@@ -249,7 +251,7 @@ def main():
         
         
         #CHECK COLLISION BETWEEN SNAKE AND WALL       
-        if snake_segments[0].wallCollide():
+        if snake_segments[0].wallCollide() or snakecollision():
             game_over = True         
             x_change = 0
             y_change = 0            
