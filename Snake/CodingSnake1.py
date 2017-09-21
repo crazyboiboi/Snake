@@ -164,9 +164,11 @@ def snakemove():
 
 
 
-def snakecollision():
-    if pygame.sprite.spritecollide(snake_segments[0], allspriteslist, False, False):
-        return True
+
+'''This code checks for the head collision but there is a problem'''
+# def snakecollision():
+#     if pygame.sprite.spritecollide(snake_segments[0], allspriteslist, False, False):
+#         return True
 
 
 
