@@ -253,7 +253,7 @@ def main():
         
         
         #CHECK COLLISION BETWEEN SNAKE AND WALL       
-        if snake_segments[0].wallCollide() or snakecollision():
+        if snake_segments[0].wallCollide(): #or snakecollision():
             game_over = True         
             x_change = 0
             y_change = 0            
@@ -265,6 +265,9 @@ def main():
             text_x = window.get_width() / 2 - text_rect.width / 2
             text_y = window.get_height() / 2 - text_rect.height / 2
             window.blit(text, [text_x, text_y])
+            # Just put this shit here, it works fine like this
+            # Cuz you need to end the loop
+            end = True
         
         
         
